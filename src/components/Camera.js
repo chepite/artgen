@@ -51,6 +51,7 @@ const test =  async () => {
     //  console.log("mouth: ", mouth)
   
      console.log(detections[0]["expressions"]);
+     //grootste uitkomt onder 1 is de expression©
    }
 
 

@@ -1,10 +1,12 @@
 import "./App.css";
-import Camera from "./components/Camera"
+import Camera from "./components/Camera_auto";
 
 const App = () => {
 
-  return (
-    <Camera/>
+  return (   
+    <>
+      <Camera />
+    </>
   );
 };
 
