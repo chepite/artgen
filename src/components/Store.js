@@ -6,6 +6,9 @@ const useStore = create((set) => ({
   eyePos: { x: 0, y: 0 },
   nosePos: { x: 0, y: 0 },
 
+  //colour scheme with primary and secondary/tertiary colours => colour scheme generator?
+  //=> chroma.js or so
+
   //test function works
     // posfunc: (pos) =>
     //   set((state) => ({
@@ -14,19 +17,19 @@ const useStore = create((set) => ({
 
     setmouthPos: (pos) =>
       set((state) => ({
-        mouthPos: { x: pos.x, y: pos.y },
+        mouthPos: { x: 2*pos.x, y: 2*pos.y },
       })),
     setearPos: (pos) =>
       set((state) => ({
-        earPos: { x: pos.x, y: pos.y },
+        earPos: { x: 2*pos.x, y: 2*pos.y },
       })),
     seteyePos: (pos) =>
       set((state) => ({
-        eyePos: { x: pos.x, y: pos.y },
+        eyePos: { x: 2*pos.x, y: 2*pos.y },
       })),
     setnosePos: (pos) =>
       set((state) => ({
-        nosePos: { x: pos.x, y: pos.y },
+        nosePos: { x: 2*pos.x, y: 2*pos.y },
       })),
 }));
 export default useStore;

@@ -7,10 +7,7 @@ const test = async () => {
   console.log("testing")
    Promise.all([
     await faceapi.loadSsdMobilenetv1Model("/models"),
-    // await faceapi.loadTinyFaceDetectorModel('/models'),
     await faceapi.loadFaceLandmarkModel("/models"),
-    //await faceapi.loadFaceLandmarkTinyModel('/models'),
-    //await faceapi.loadFaceRecognitionModel('/models'),
     await faceapi.loadFaceExpressionModel("/models"),
   ]).then(startVideo());
 };
@@ -61,13 +58,13 @@ const Camera =  () => {
       } else {
         updateable = true;
       }
-    console.log("detecting");
+    // console.log("detecting");
     const detections = await faceapi
       .detectAllFaces(videosrc)
       .withFaceLandmarks()
       .withFaceExpressions();
     // LOGGING CERTAIN LANDMARKS
-    console.log(detections)
+    // console.log(detections)
     if(detections.length !== 0){
       const landmarks = detections[0]["landmarks"];
       //oor hangt aan jaw? misschien werkt dit
@@ -97,13 +94,12 @@ const Camera =  () => {
     detect();
   };
  
-  
-  
-
   return (
     <>
     <button onClick={detect}></button>
-      <video id="video" width="720" height="560" autoPlay muted></video>
+      <video id="video"
+        width="720" height="560" 
+       autoPlay muted></video>
     </>
   );
 };
