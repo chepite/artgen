@@ -36,10 +36,10 @@ const detect = async () => {
     .withFaceLandmarks()
     .withFaceExpressions();
   // LOGGING CERTAIN LANDMARKS
-  //  const landmarks = detections[0]["landmarks"];
+    const landmarks = detections[0]["landmarks"];
   //  const jawOutline = landmarks.getJawOutline();
-  //  const nose = landmarks.getNose();
-  //  const mouth = landmarks.getMouth();
+    //const nose = landmarks.getNose();
+    const mouth = landmarks.getMouth()[0];
   //  const leftEye = landmarks.getLeftEye();
   //  const rightEye = landmarks.getRightEye();
   //  const leftEyeBbrow = landmarks.getLeftEyeBrow();
@@ -47,7 +47,7 @@ const detect = async () => {
 
   //  console.log("nose: ", nose);
 
-  //  console.log("mouth: ", mouth)
+    console.log("mouth: ", mouth)
 
   //get the emotion
   const emotions = detections[0]["expressions"];
