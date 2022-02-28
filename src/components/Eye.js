@@ -1,8 +1,14 @@
-const Eye = () =>{
-    return (
-      <>
+import useStore from "./Store";
+
+const Eye = ({translator}) => {
+  const eyePos = useStore((state) => state.eyePos);
+
+  return (
+    <>
         <path
-          transform="scale(0.5), translate(500,-300)"
+          transform={`scale(0.4), translate(${eyePos.x + translator},${
+            eyePos.y
+          })`}
           //test
           fill="none"
           stroke="#000"
@@ -15,7 +21,9 @@ const Eye = () =>{
         />
         <line
           //test
-          transform="scale(0.5), translate(500,-300)"
+          transform={`scale(0.4), translate(${eyePos.x + translator},${
+            eyePos.y
+          })`}
           fill="none"
           stroke="#000"
           strokeLinecap="round"
@@ -30,7 +38,9 @@ const Eye = () =>{
         />
         <line
           //test
-          transform="scale(0.5), translate(500,-300)"
+          transform={`scale(0.4), translate(${eyePos.x + translator},${
+            eyePos.y
+          })`}
           fill="none"
           stroke="#000"
           strokeLinecap="round"
@@ -45,7 +55,9 @@ const Eye = () =>{
         />
         <line
           //test
-          transform="scale(0.5), translate(500,-300)"
+          transform={`scale(0.4), translate(${eyePos.x + translator},${
+            eyePos.y
+          })`}
           fill="none"
           stroke="#000"
           strokeLinecap="round"
@@ -60,7 +72,9 @@ const Eye = () =>{
         />
         <circle
           //test
-          transform="scale(0.5), translate(500,-300)"
+          transform={`scale(0.4), translate(${eyePos.x + translator},${
+            eyePos.y
+          })`}
           fill="none"
           stroke="#000"
           strokeLinecap="round"
@@ -74,7 +88,9 @@ const Eye = () =>{
         />
         <circle
           //test
-          transform="scale(0.5), translate(500,-300)"
+          transform={`scale(0.4), translate(${eyePos.x + translator},${
+            eyePos.y
+          })`}
           fill="none"
           stroke="#000"
           strokeLinecap="round"
@@ -86,7 +102,7 @@ const Eye = () =>{
           cy="604.53"
           r="89.9"
         />
-      </>
-    );
-}
+    </>
+  );
+};
 export default Eye;

@@ -1,12 +1,29 @@
 import "./App.css";
 import Camera from "./components/Camera_auto";
 import FaceComp from "./components/FaceComp";
+import useStore from "./components/Store";
 
 
-const App = () => {
+const App =  () => {
+  const mouthPos = useStore((state) => state.mouthPos);
+       console.log(mouthPos);
+
+  //global states
+  //mouth pos
+  //eyes pos'
+  //ears pos'
+  //nose pos => (x-pos right eye- x-pos left eye)/2
 
   return (   
     <>
+    {/* <form onSubmit={(e)=> {e.preventDefault();
+    const valueText = document.getElementById("value").value;
+      posfunc(parseInt(valueText));
+      console.log(mouthPos.x)
+     }}>
+      <input id="value" type="text"></input>
+      <input type="submit"></input>
+    </form> */}
       <Camera />
       <FaceComp/>
     </>
