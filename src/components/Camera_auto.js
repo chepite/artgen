@@ -41,11 +41,11 @@ const Camera =  () => {
   //the app is building for the first time => updateable fixes this => 
   //looks if it is first run or not
   let updateable = false;
-    const mouthPos = useStore((state) => state.mouthPos);
     const setmouthPos = useStore((state) => state.setmouthPos);
     const setearPos = useStore((state) => state.setearPos);
     const seteyePos = useStore((state) => state.seteyePos);
     const setnosePos = useStore((state) => state.setnosePos);
+    const setEmotion = useStore((state) => state.setEmotion);
 
 
 
@@ -65,6 +65,7 @@ const Camera =  () => {
       .withFaceExpressions();
     // LOGGING CERTAIN LANDMARKS
     // console.log(detections)
+
     if(detections.length !== 0){
       const landmarks = detections[0]["landmarks"];
       //oor hangt aan jaw? misschien werkt dit
@@ -82,12 +83,13 @@ const Camera =  () => {
           emotion.value = emotions[key];
         }
       }
-      console.log(
-        "filtered emotion: ",
-        emotion.emotion,
-        " value: ",
-        emotion.value
-      );
+      setEmotion(emotion.emotion)
+      // console.log(
+      //   "filtered emotion: ",
+      //   emotion.emotion,
+      //   " value: ",
+      //   emotion.value
+      // );
     }
 
     //make emotion a state instead of a local value in this function
