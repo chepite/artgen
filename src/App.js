@@ -6,6 +6,12 @@ import useStore from "./components/Store";
 
 const App =  () => {
     const emotion = useStore((state) => state.emotion);
+    const primaryColor = useStore((state) => state.primaryColor);
+    const secondaryColor = useStore((state) => state.secondaryColor);
+
+    let $root = document.getElementById('root');
+    $root.style.backgroundColor =
+      `${primaryColor}`;
 
   return (   
     <>

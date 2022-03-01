@@ -6,6 +6,9 @@ const useStore = create((set) => ({
   eyePos: { x: 0, y: 0 },
   nosePos: { x: 0, y: 0 },
   emotion: "neutral",
+  primaryColor: "#FFFFFF",
+  secondaryColor: "#FFFFFF",
+  tertiaryColor: "#FFFFFF",
 
   //colour scheme with primary and secondary/tertiary colours => colour scheme generator?
   //=> chroma.js or so
@@ -18,6 +21,18 @@ const useStore = create((set) => ({
   setEmotion: (emo) =>
     set((state) => ({
       emotion: emo,
+    })),
+  setPrimaryColor: (color) =>
+    set((state) => ({
+      primaryColor: color,
+    })),
+  setSecondaryColor: (color) =>
+    set((state) => ({
+      secondaryColor: color,
+    })),
+  setTertiaryColor: (color) =>
+    set((state) => ({
+      tertiaryColor: color,
     })),
   setmouthPos: (pos) =>
     set((state) => ({

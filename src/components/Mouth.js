@@ -2,6 +2,7 @@ import useStore from "./Store";
 
 const Mouth = () => {
     const mouthPos = useStore((state) => state.mouthPos);
+    const tertiaryColor = useStore((state) => state.tertiaryColor);
 
   return (
     <>
@@ -11,7 +12,7 @@ const Mouth = () => {
           300 + mouthPos.y
         })`}
         fill="none"
-        stroke="#000"
+        stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={11}
@@ -25,7 +26,7 @@ const Mouth = () => {
           300 + mouthPos.y
         })`}
         fill="none"
-        stroke="#000"
+        stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={11}
@@ -39,7 +40,7 @@ const Mouth = () => {
           300 + mouthPos.y
         })`}
         fill="none"
-        stroke="#000"
+        stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={11}
