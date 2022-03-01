@@ -3,6 +3,8 @@ import useStore from "./Store";
 const Eye = ({translator}) => {
   const eyePos = useStore((state) => state.eyePos);
   const tertiaryColor = useStore((state) => state.tertiaryColor);
+  const lineWidth = useStore((state) => state.lineWidth);
+
   return (
     <>
       <path
@@ -14,7 +16,7 @@ const Eye = ({translator}) => {
         stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={15}
+        strokeWidth={lineWidth}
         //test
         className="cls-1"
         d="M248.16,831.48a593.49,593.49,0,0,0,8.67,101.32,41.87,41.87,0,0,0,39.83,34.48q11.44.45,23,.45c325.93,0,590.16-264.22,590.16-590.16a593.49,593.49,0,0,0-8.67-101.32,41.88,41.88,0,0,0-39.83-34.48q-11.46-.45-23-.45C512.38,241.32,248.16,505.55,248.16,831.48Z"
@@ -28,7 +30,7 @@ const Eye = ({translator}) => {
         stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={15}
+        strokeWidth={lineWidth}
         //test
         className="cls-1"
         x1="861.34"
@@ -45,7 +47,7 @@ const Eye = ({translator}) => {
         stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={15}
+        strokeWidth={lineWidth}
         //test
         className="cls-1"
         x1="420.17"
@@ -62,7 +64,7 @@ const Eye = ({translator}) => {
         stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={15}
+        strokeWidth={lineWidth}
         //test
         className="cls-1"
         x1="256.83"
@@ -79,7 +81,7 @@ const Eye = ({translator}) => {
         stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={15}
+        strokeWidth={lineWidth}
         //test
         className="cls-1"
         cx="579"
@@ -95,7 +97,7 @@ const Eye = ({translator}) => {
         stroke={tertiaryColor}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={15}
+        strokeWidth={lineWidth}
         //test
         className="cls-1"
         cx="579"

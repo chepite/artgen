@@ -9,6 +9,7 @@ const useStore = create((set) => ({
   primaryColor: "#FFFFFF",
   secondaryColor: "#FFFFFF",
   tertiaryColor: "#FFFFFF",
+  lineWidth: 11,
 
   //colour scheme with primary and secondary/tertiary colours => colour scheme generator?
   //=> chroma.js or so
@@ -18,6 +19,10 @@ const useStore = create((set) => ({
   //   set((state) => ({
   //     mouthPos: {x: pos},
   //   })),
+  setLineWidth: (width) =>
+    set((state) => ({
+      lineWidth: width,
+    })),
   setEmotion: (emo) =>
     set((state) => ({
       emotion: emo,

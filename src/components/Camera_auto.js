@@ -134,7 +134,7 @@ const Camera = () => {
 
   return (
     <>
-      <button onClick={detect}></button>
+      <button onClick={detect}>Start</button>
       <video
         id="video"
         ref={videoRef}

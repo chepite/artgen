@@ -1,5 +1,11 @@
+:root {
+  --primaryColor: "#FFFFFF";
+ --secondaryColor: "#FFFFFF";
+ --tertiaryColor: "#FFFFFF"
+}
 body{
-    overflow: hidden;
+background: linear-gradient(var(--primaryColor), var(--secondaryColor));    
+overflow: hidden;
 }
 video{
     opacity: 0;
