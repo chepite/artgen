@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import Camera from "./components/Camera_auto";
 import FaceComp from "./components/FaceComp";
@@ -9,9 +10,12 @@ const App =  () => {
     const primaryColor = useStore((state) => state.primaryColor);
     const secondaryColor = useStore((state) => state.secondaryColor);
 
-    let $root = document.getElementById('root');
-    $root.style.backgroundColor =
-      `${primaryColor}`;
+    useEffect(() => {
+      let $root = document.getElementById("root");
+      $root.style.backgroundColor = `${primaryColor}`;
+    }, [primaryColor])
+
+    
 
   return (   
     <>

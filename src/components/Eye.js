@@ -6,8 +6,8 @@ const Eye = ({translator}) => {
   return (
     <>
       <path
-        transform={`scale(0.4), translate(${eyePos.x + translator},${
-          eyePos.y
+        transform={`scale(0.4), translate(${2 * eyePos.x + translator},${
+          2 * eyePos.y
         })`}
         //test
         fill="none"
@@ -21,8 +21,8 @@ const Eye = ({translator}) => {
       />
       <line
         //test
-        transform={`scale(0.4), translate(${eyePos.x + translator},${
-          eyePos.y
+        transform={`scale(0.4), translate(${2 * eyePos.x + translator},${
+          2 * eyePos.y
         })`}
         fill="none"
         stroke={tertiaryColor}
@@ -38,8 +38,8 @@ const Eye = ({translator}) => {
       />
       <line
         //test
-        transform={`scale(0.4), translate(${eyePos.x + translator},${
-          eyePos.y
+        transform={`scale(0.4), translate(${2 * eyePos.x + translator},${
+          2 * eyePos.y
         })`}
         fill="none"
         stroke={tertiaryColor}
@@ -55,8 +55,8 @@ const Eye = ({translator}) => {
       />
       <line
         //test
-        transform={`scale(0.4), translate(${eyePos.x + translator},${
-          eyePos.y
+        transform={`scale(0.4), translate(${2 * eyePos.x + translator},${
+          2 * eyePos.y
         })`}
         fill="none"
         stroke={tertiaryColor}
@@ -72,8 +72,8 @@ const Eye = ({translator}) => {
       />
       <circle
         //test
-        transform={`scale(0.4), translate(${eyePos.x + translator},${
-          eyePos.y
+        transform={`scale(0.4), translate(${2 * eyePos.x + translator},${
+          2 * eyePos.y
         })`}
         fill="none"
         stroke={tertiaryColor}
@@ -88,8 +88,8 @@ const Eye = ({translator}) => {
       />
       <circle
         //test
-        transform={`scale(0.4), translate(${eyePos.x + translator},${
-          eyePos.y
+        transform={`scale(0.4), translate(${2 * eyePos.x + translator},${
+          2 * eyePos.y
         })`}
         fill="none"
         stroke={tertiaryColor}

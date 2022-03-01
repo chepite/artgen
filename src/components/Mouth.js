@@ -8,8 +8,8 @@ const Mouth = () => {
     <>
       <path
         // test
-        transform={`scale(0.5), translate(${300 + mouthPos.x},${
-          300 + mouthPos.y
+        transform={`scale(0.5), translate(${300 + 2 * mouthPos.x},${
+          300 + 2 * mouthPos.y
         })`}
         fill="none"
         stroke={tertiaryColor}
@@ -22,8 +22,8 @@ const Mouth = () => {
       />
       <path
         // test
-        transform={`scale(0.5), translate(${300 + mouthPos.x},${
-          300 + mouthPos.y
+        transform={`scale(0.5), translate(${300 + 2 * mouthPos.x},${
+          300 + 2 * mouthPos.y
         })`}
         fill="none"
         stroke={tertiaryColor}
@@ -36,8 +36,8 @@ const Mouth = () => {
       />
       <path
         // test
-        transform={`scale(0.5), translate(${300 + mouthPos.x},${
-          300 + mouthPos.y
+        transform={`scale(0.5), translate(${300 + 2 * mouthPos.x},${
+          300 + 2 * mouthPos.y
         })`}
         fill="none"
         stroke={tertiaryColor}

@@ -36,19 +36,19 @@ const useStore = create((set) => ({
     })),
   setmouthPos: (pos) =>
     set((state) => ({
-      mouthPos: { x: 2 * pos.x, y: 2 * pos.y },
+      mouthPos: { x: pos.x, y: pos.y },
     })),
   setearPos: (pos) =>
     set((state) => ({
-      earPos: { x: 2 * pos.x, y: 2 * pos.y },
+      earPos: { x: pos.x, y: pos.y },
     })),
   seteyePos: (pos) =>
     set((state) => ({
-      eyePos: { x: 2 * pos.x, y: 2 * pos.y },
+      eyePos: { x: pos.x, y: pos.y },
     })),
   setnosePos: (pos) =>
     set((state) => ({
-      nosePos: { x: 2 * pos.x, y: 2 * pos.y },
+      nosePos: { x: pos.x, y: pos.y },
     })),
 }));
 export default useStore;
