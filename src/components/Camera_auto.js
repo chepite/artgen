@@ -25,6 +25,8 @@ let face = {
 
 const Camera = () => {
   const videoRef = useRef(false);
+  const startButton = useRef(false);
+
 
   //first run makes it fail because the camera is updating components while
   //the app is building for the first time => updateable fixes this =>
@@ -41,6 +43,7 @@ const Camera = () => {
 
 
   const detect = async () => {
+    startButton.current.innerText= "Loading..."
     const detections = await faceapi
       .detectAllFaces(videoRef.current)
       .withFaceLandmarks()
@@ -53,6 +56,7 @@ const Camera = () => {
       face.nose = landmarks.getNose()[0];
       face.mouth = landmarks.getMouth()[0];
       face.eye = landmarks.getLeftEye()[0];
+      face.ear= landmarks.getJawOutline()[0]
 
       //when not doing this it will update the camera component before the video is there => makes sure there aren't any startup errors
         setmouthPos(face.mouth);
@@ -117,6 +121,7 @@ const Camera = () => {
           break;
       }
     }
+    startButton.current.classList.add("hidden")
     detect();
   };
 
@@ -132,9 +137,10 @@ const Camera = () => {
     });
   }, [videoRef]);
 
+
   return (
     <>
-      <button onClick={detect}>Start</button>
+      <button className="startButton" ref={startButton} onClick={detect}>Get artsy</button>
       <video
         id="video"
         ref={videoRef}

@@ -1,13 +1,53 @@
 :root {
   --primaryColor: "#FFFFFF";
  --secondaryColor: "#FFFFFF";
- --tertiaryColor: "#FFFFFF"
+ --tertiaryColor: "#FFFFFF";
+ --rotation: (0deg);
 }
 body{
 background: linear-gradient(var(--primaryColor), var(--secondaryColor));    
 overflow: hidden;
 }
+
 video{
     opacity: 0;
     position: absolute;
+}
+.startButton{
+    width: 8rem;
+    height: 4rem;
+    color: white;
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+    border-radius: .3125rem;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-top: 0.4rem;
+}
+.hidden{
+    display: none;
+}
+.form{
+    margin: 2rem;
+    width: 20rem;
+}
+.form__row{
+    display: flex;
+    flex-direction: column;
+}
+.emotion{
+    font-size: 1.6;
+    margin-left: 2rem;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+svg{
+    position: relative;
+    z-index: -1;
+    margin-top: -10rem;
+    transform: rotate(var(--rotation));
 }

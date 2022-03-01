@@ -9,9 +9,7 @@ import useStore from "./components/Store";
 const App =  () => {
     const primaryColor = useStore((state) => state.primaryColor);
     const secondaryColor = useStore((state) => state.secondaryColor);
-    const lineWidth = useStore((state) => state.lineWidth);
-    const emotion = useStore((state) => state.emotion);
-
+    const rotation = useStore((state) => state.rotation);
 
 
     useEffect(() => {
@@ -19,13 +17,15 @@ const App =  () => {
         root.style.setProperty("--primaryColor", `${primaryColor}`);
         root.style.setProperty("--secondaryColor", `${secondaryColor}`);
 
-    }, [primaryColor,secondaryColor])
+    }, [primaryColor,secondaryColor]);
 
-    
+    useEffect(() => {
+      let root = document.documentElement;
+      root.style.setProperty("--rotation", `${rotation}deg`);
+    }, [rotation]);
 
   return (   
     <>
-    <p>{emotion}</p>
       <Form/>
       <Camera />
       <FaceComp/>
