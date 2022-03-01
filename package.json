@@ -1,5 +1,5 @@
 {
-  "name": "artgen",
+  "name": "artgenonline",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4",
-    "zustand": "^3.7.0"
+    "zustand": "^3.7.1"
   },
   "scripts": {
     "start": "react-scripts start",
