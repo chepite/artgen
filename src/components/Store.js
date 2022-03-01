@@ -10,6 +10,7 @@ const useStore = create((set) => ({
   secondaryColor: "#FFFFFF",
   tertiaryColor: "#FFFFFF",
   lineWidth: 11,
+  rotation: 0,
 
   //colour scheme with primary and secondary/tertiary colours => colour scheme generator?
   //=> chroma.js or so
@@ -19,6 +20,10 @@ const useStore = create((set) => ({
   //   set((state) => ({
   //     mouthPos: {x: pos},
   //   })),
+  setRotation: (rotation) =>
+    set((state) => ({
+      rotation: rotation,
+    })),
   setLineWidth: (width) =>
     set((state) => ({
       lineWidth: width,
